@@ -50,7 +50,7 @@ body{
   border-bottom:16px solid #336699;
 }
 /*route*/
-#floating-panel2 {
+#div_route {
   position: absolute;
   top: 10px;
   left: 75%;
@@ -64,7 +64,7 @@ body{
   padding-left: 10px;
 }  
 /*locate*/
-#floating-panel {
+#div_locate {
   position: absolute;
   top: 10px;
   left: 85%;
@@ -78,7 +78,7 @@ body{
   padding-left: 10px;
 } 
 /*drop box*/
-#floating-panel3 {
+#div_changeGasType {
   position: absolute;
   top: 60px;
   left: 75%;
@@ -92,7 +92,7 @@ body{
   padding-left: 10px;
 } 
 /*start and end*/
-#floating-panel4 {
+#div_startAndEnd {
   position: absolute;
   top: 10px;
   left: 40%;

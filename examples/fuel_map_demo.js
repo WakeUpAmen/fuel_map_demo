@@ -37,12 +37,14 @@ $(document).ready(function(){
       var retStr = "LINESTRING("
       
       function myformat(n) {
+        n=n.toFixed(5);
         return (n>0?'+':'') + n;
       }
 
       for(var i=0; i < pts.length; i++){
-        var pt = pts[i]
+        var pt = pts[i];
         retStr = retStr + myformat(pt[0]) + myformat(pt[1]);
+        //console.log(retStr);
         if (i < pts.length-1){
           retStr = retStr + ","
         }
@@ -91,7 +93,8 @@ $(document).ready(function(){
                 //console.log(s.lng())
                 pts.push([s.lng(), s.lat()])
                 //console.log("--")
-              }       
+              } 
+              console.log(pts);      
               lineStr = formatLineString(pts)
                                  
               $.ajax({
@@ -121,7 +124,7 @@ $(document).ready(function(){
                   window.mymap.fitZoom();          
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
-                alert("data too large");
+                alert("Data is too large to display");
                 // alert(thrownError);
                 }
               });    
