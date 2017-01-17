@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>GMaps.js &mdash; Geolocation</title>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+  <script type="text/javascript" src="../gmaps.js"></script>
+  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.3.0/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="examples.css" />
+  <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body>
+  <div id="floating-panel4">
+    <b>Start: </b>
+    <input id="origin-input" class="controls" type="text" placeholder="74 marvin lane", value="74 marvin lane, piscataway">
+    <b>end: </b>
+    <input id="destination-input" class="controls" type="text" placeholder="617 bowser road", value="617 bowser road, piscataway">
+  </div>
+  
+  
+  <div id="floating-panel">
+      <input id="locate" type="button" value="locate me">
+  </div>
+
+  <div id="floating-panel2">
+    <input id="route" type="button" value="route me">
+  </div>
+  
+  <div id="floating-panel3">
+    <b>choose gas type: </b>
+    <select id="gasType" onchange="changeGas()">
+        <option value="all">all</option>
+        <option value="BD">BD</option>
+        <option value="CNG">CNG</option>
+        <option value="E85">E85</option>
+        <option value="ELEC">ELEC</option>
+        <option value="HY">HY</option>
+        <option value="LNG">LNG</option>
+        <option value="LPG">LPG</option>
+    </select>
+  </div>
+
+  <script type="text/javascript">
+      document.getElementById('locate').addEventListener('click', function() {
+          locateMe();});
+
+      document.getElementById('route').addEventListener('click', function() {        
+          routeMe();});      
+  </script>
+  <!-- <button onclick="locateMe()">Click me</button> -->
+  <h2>gmaps app</h2>
+  <div class="row">
+    <div class="span11">
+      <div id="map"></div>
+    </div>
+    <div class="span6">
+    </div>
+  </div>
+</body>
+</html>
